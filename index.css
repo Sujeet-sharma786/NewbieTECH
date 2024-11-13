@@ -1,0 +1,222 @@
+body{
+    background-color: #121111;
+}
+
+.loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .loader {
+    display: flex;
+    justify-content: space-between;
+    width: 80px;
+  }
+  
+  .loader div {
+    width: 16px;
+    height: 16px;
+    background-color: #FF5C35;
+    border-radius: 50%;
+    animation: grow-shrink 1.5s infinite;
+  }
+  
+  .loader div:nth-child(1) {
+    animation-delay: 0s;
+  }
+  
+  .loader div:nth-child(2) {
+    animation-delay: 0.3s;
+  }
+  
+  .loader div:nth-child(3) {
+    animation-delay: 0.6s;
+  }
+  
+  @keyframes grow-shrink {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.5);
+    }
+  }
+
+.custom{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.description{
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 500px;
+    margin-top: 50px;
+    
+}
+
+.welcome{
+
+    border: 1px solid rgb(79, 18, 79);
+    padding: 5px;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    color: white;
+    font-size: 15px;
+    background-color:  rgb(195, 32, 195);
+
+}
+
+.description .slogan{
+    /* border: 1px solid red; */
+    /* height: 200px; */
+    width:441px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: white;
+
+}
+
+.statement{
+    /* border: 1px solid pink; */
+    display: flex;
+    width: 600px;
+    text-align: center;
+    color: white;
+}
+
+.our-value{
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    height: 500px;
+    /* color: white; */
+    padding: 140px;
+}
+
+.our-value-1{
+    /* border: 1px solid white; */
+    text-align: center;
+    align-items: center;
+    display: flex;
+    width: 700px;
+    height: 475px;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 2px 2px black;
+}
+
+.our-value-2{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    /* border: 1px solid black; */
+    height: 500px;
+
+}
+
+.our-value-21{
+    /* border: 1px solid white; */
+    width: 500px;
+    height: 225px;
+    color: white;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0px 0px 2px 2px black;
+    background-color:#b47cfd;;
+}
+.our-value-22{
+    /* border: 1px solid white; */
+    width: 500px;
+    height: 225px;
+    color: white;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0px 0px 2px 2px black;
+    background-color: #ff7fc2;
+}
+.what-we-offer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 150px;
+}
+.WWO{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.services-list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* border: 1px solid black; */
+    justify-content: space-evenly;
+    
+    padding: 70px;
+    height: 700px;
+
+
+}
+
+.services-list-box{
+    height: 250px;
+    width: 350px;
+    /* border: 1px solid white; */
+    /* color: white; */
+    border-radius: 10px;
+    box-shadow: 0px 0px 2px 2px black;
+    --background-overlay: '';
+    background-color: transparent;
+    background-image: linear-gradient(215deg, #2b233880 0%, var(--e-global-color-c94d9ab) 65%);
+
+    
+}
+.client-feedback{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 150px;
+}
+.cf{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.reviews{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    /* border: 1px solid white; */
+    padding: 5px;
+}
+.review-box{
+    border: 1px solid white;
+    height: 250px;
+    width: 700px;
+    color: white;
+    border-radius: 5px;
+    
+
+}
+
+/* contact-section  */
