@@ -1,7 +1,7 @@
 body{
     background-color: #121111;
 }
-
+/* 
 .loader-container {
     display: flex;
     justify-content: center;
@@ -42,13 +42,9 @@ body{
     50% {
       transform: scale(1.5);
     }
-  }
+  } */
 
-.custom{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
+
 
 .description{
     /* border: 1px solid black; */

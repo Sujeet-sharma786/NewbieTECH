@@ -6,20 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Newbie</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./index.css">
-    <link rel="stylesheet" href="./contact.css">
-    <link rel="stylesheet" href="./team.css">
+    <link rel="stylesheet" href="./CSS/index.css">
+    <link rel="stylesheet" href="./CSS/contact.css">
+    <link rel="stylesheet" href="./CSS/team.css">
 </head>
 
 <body>
 
-    <div class="loader-container">
+    <!-- <div class="loader-container">
         <div class="loader">
             <div></div>
             <div></div>
             <div></div>
         </div>
-    </div>
+    </div> -->
+
+
+
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">
             <h2>NewbieTECH</h2>
@@ -121,37 +124,37 @@
                 <hr color="purple">
             </div>
 
-            <form class="contact-form">
+            <form class="contact-form" id="form">
                 <h2>Send us a message</h2>
                 <h6>Please feel free to send us any questions, feedback or suggestions you might have.</h6>
                 <div class="contact-form-c1">
                     <div class="contact-form-c2">
-                        <label>Name</label>
-                        <input type="text" class="form-group-input" placeholder="Name">
+                        <label>Name <span class="mandatory">*</span></label>
+                        <input type="text" class="form-group-input" name="name" id="name" placeholder="Name">
 
                     </div>
                     <div class="contact-form-c2">
-                        <label>Company</label>
-                        <input type="text" class="form-group-input" placeholder="Company">
+                        <label>Company <span class="mandatory">*</span></label>
+                        <input type="text" class="form-group-input" name="company" id="company" placeholder="Company">
                     </div>
                     <div class="contact-form-c2">
-                        <label>Phone</label>
-                        <input type="number" class="form-group-input" placeholder="Phone">
+                        <label>Phone <span class="mandatory">*</span></label>
+                        <input type="number" class="form-group-input" name="phone" id="phone" placeholder="Phone">
                     </div>
                     <div class="contact-form-c2">
-                        <label>Email</label>
-                        <input type="email" class="form-group-input" placeholder="Email">
+                        <label>Email <span class="mandatory">*</span></label>
+                        <input type="email" class="form-group-input" name="email" id="email" placeholder="Email">
                     </div>
 
 
                 </div>
                 <div class="contact-form-c3">
-                    <label>Subject</label>
-                    <input type="text" class="form-input">
+                    <label>Subject <span class="mandatory">*</span></label>
+                    <input type="text" class="form-input" name="subject" id="subject">
                 </div>
                 <div class="contact-form-c3">
-                    <label>Select Services</label>
-                    <select class="form-input">
+                    <label>Select Services <span class="mandatory">*</span></label>
+                    <select class="form-input" name="service" id="service">
                         <option selected>Web Development</option>
                         <option>App Development</option>
                         <option>AI-ML Services</option>
@@ -163,11 +166,13 @@
                 </div>
                 <div class="connect-form-c4">
                     <label>Message</label>
-                    <textarea placeholder="Message" class="Textarea">
+                    <textarea placeholder="Message" class="Textarea" name="message" id="message">
 
                     </textarea>
                 </div>
                 <button type="submit" class="btn btn-color">Sign in</button>
+
+                <h6 class="notify">Email sent succesfully</h6>                         <!--notification-->
             </form>
 
         </div>
@@ -329,23 +334,9 @@
         document.querySelector(".contact-c2").style.display = "none";
         document.querySelector(".team-class").style.display = "none";
         document.querySelector(".team-c1").style.display = "none";
-        document.querySelector(".loader-container").style.display = "none";
-        async function example() {
-                console.log("Start");
-                await sleep(2000); // Pauses for 2 seconds
-                console.log("After 2 seconds");
-            }
+       document.querySelector(".notify").style.display = "none"
         const contactUs = () => {
-            document.querySelector(".contact-c1").style.display = "none";
-            document.querySelector(".contact-c2").style.display = "none";
-            document.querySelector(".loader-container").style.display = "flex";
-            
-
-            example();
-            document.querySelector(".loader-container").style.display = "none";
-
-
-
+    
             document.querySelector(".description").style.display = "none";
             document.querySelector(".our-value").style.display = "none";
             document.querySelector(".what-we-offer").style.display = "none";
@@ -368,6 +359,38 @@
         function home() {
             window.location.reload()
         }
+
+        document.getElementById('form').addEventListener('submit',async(e)=>{
+            e.preventDefault();
+            const formData = {
+                name:document.getElementById('name').value,
+                company:document.getElementById('company').value,
+                phone:document.getElementById('phone').value,
+                email:document.getElementById('email').value,
+                subject:document.getElementById('subject').value,
+                service:document.getElementById('service').value,
+                message:document.getElementById('message').value,
+            };
+
+            await fetch('http://localhost:3000/send-email',{
+                method:'POST',
+                headers:{'Content-Type':'application/json'},
+                body:JSON.stringify(formData)
+
+            })
+            .then(response=>response.json())
+            .then(data=>{
+                console.log('Success: ',data)
+                document.querySelector(".notify").style.display = "flex"
+            })
+            .catch(error=>{
+                console.log('Error: ',error)
+            });
+        });
+
+
+
+
     </script>
 </body>
 

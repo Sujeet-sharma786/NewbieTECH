@@ -92,9 +92,6 @@
     /* border: none; */
     /* background-color: rgb(160, 59, 59) ; */
 }
-.form-input{
-    /* width: 300px; */
-}
 
 .form-group-input{
     width: 270px;
@@ -108,8 +105,22 @@
     width: 100%;
     height: 40px;
     border-radius:5px ;
-    background-color: rgb(160, 59, 59) ;
+    background-color: rgb(160, 59, 59) ;    
     border: none;
+    /* margin-top: 5px; */
+}
+
+.notify{
+    width: 100%;
+    height: 40px;
+    border-radius:5px ;
+    background-color: rgba(11, 109, 6, 0.981) ;
+    border: none;   
+    margin-top:10px ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 23px;
 }
 .Textarea{
     width: 100%;
@@ -120,4 +131,8 @@
 
 .btn-color{
     background-color: rgb(162, 74, 74);
+}
+
+.mandatory{
+    color: red;
 }
