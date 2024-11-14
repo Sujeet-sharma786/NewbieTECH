@@ -59,7 +59,7 @@ body{
 
 .welcome{
 
-    border: 1px solid rgb(79, 18, 79);
+    border: 2px solid rgb(79, 18, 79);
     padding: 5px;
     border-radius: 25px;
     display: flex;
@@ -68,7 +68,7 @@ body{
     margin-top: 20px;
     color: white;
     font-size: 15px;
-    background-color:  rgb(195, 32, 195);
+    /* background-color:  rgb(195, 32, 195); */
 
 }
 
@@ -113,6 +113,7 @@ body{
     color: white;
     border-radius: 10px;
     box-shadow: 0px 0px 2px 2px black;
+    padding: 15px;
 }
 
 .our-value-2{
@@ -133,7 +134,8 @@ body{
     align-items: center;
     border-radius: 10px;
     box-shadow: 0px 0px 2px 2px black;
-    background-color:#b47cfd;;
+    background-color:#b47cfd;
+    padding: 15px;
 }
 .our-value-22{
     /* border: 1px solid white; */
@@ -145,6 +147,7 @@ body{
     border-radius: 10px;
     box-shadow: 0px 0px 2px 2px black;
     background-color: #ff7fc2;
+    padding: 15px;
 }
 .what-we-offer{
     display: flex;
@@ -186,10 +189,15 @@ body{
     
 }
 .client-feedback{
+    height: 500px;
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
     margin-top: 150px;
+    /* border: 1px solid white; */
+    
+    
 }
 .cf{
     color: white;
@@ -203,16 +211,101 @@ body{
     flex-direction: row;
     justify-content: space-evenly;
     /* border: 1px solid white; */
-    padding: 5px;
+    width: 100%;
+    /* padding: 5px; */
 }
 .review-box{
     border: 1px solid white;
     height: 250px;
-    width: 700px;
+    /* width: 600px; */
     color: white;
     border-radius: 5px;
     
 
 }
+
+.footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    /* border: 1px solid white; */
+    margin: auto;
+    width: 86%;
+    /* border: 1px solid white; */
+
+
+}
+.footer-c6{
+   
+    /* border: 1px solid white; */
+    height: 250px;
+    width: 400px;
+    color: white;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    
+}
+
+.footer-c7{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    /* border: 1px solid white; */
+    align-items: center;
+    height: 250px;
+    width: 600px;
+    color: white;
+    border-radius: 5px;
+    
+}
+
+.footer-c1{
+/* border: 1px solid white; */
+}
+
+.footer-c2{
+    /* border: 1px solid white; */
+
+}
+.footer-c3{
+    /* border: 1px solid white; */
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-around; */
+}
+.footer-c3 h4{
+    margin: 5px;
+}
+.footer-c4{
+    /* border: 1px solid white; */
+}
+.footer-c5{
+    /* border: 1px solid white; */
+}
+
+.footer-c8{
+    /* border: 1px solid white; */
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer-c9{
+    color: white;
+}
+
+.footer-c10{
+    color: white;
+    display: flex;
+    flex-direction: row;
+    /* border: 1px solid white; */
+    width: 30%;
+    justify-content: space-around;
+}
+
 
 /* contact-section  */

@@ -172,7 +172,7 @@
                 </div>
                 <button type="submit" class="btn btn-color">Sign in</button>
 
-                <h6 class="notify">Email sent succesfully</h6>                         <!--notification-->
+                <h6 class="notify">Email sent succesfully</h6> <!--notification-->
             </form>
 
         </div>
@@ -316,17 +316,63 @@
                 </div>
             </div>
         </div>
+    </section>
 
-        <div class="">
-
+    <footer>
+        <hr style="color: white; width: 1200px; margin: auto; height: 5px;">
+        <div class="footer">
+            <div class="footer-c6">
+                <div class="footer-c1">
+                    <h1>NewbieTECH</h1>
+                </div>
+                <div class="footer-c2">
+                    <h6>Transforming Ideas into Digital Excellence. Elevate your online presence with our innovative
+                        solutions and strategic digital services.</h6>
+                </div>
+                <div class="footer-c3">
+                    <h4>FB</h4>
+                    <h4>insta</h4>
+                    <h4>Li</h4>
+                </div>
+            </div>
+            <div class="footer-c7">
+                <div class="footer-c4">
+                    <h5 style="margin-bottom: 15px;">Services</h5>
+                    <h6>Webite Development</h6>
+                    <h6>App Development</h6>
+                    <h6>AI-ML service</h6>
+                    <h6>Graphic Design</h6>
+                    <h6>Logo Design</h6>
+                    <h6>Search Engine Optimization</h6>
+                </div>
+                <div class="footer-c5">
+                    <h5 style="margin-bottom: 15px;">Company</h5>
+                    <h6>About Us</h6>
+                    <h6>Our Team</h6>
+                    <h6>Contact Us</h6>
+                    <h6>Careers</h6>
+                    <h6>Leagal Notices</h6>
+                </div>
+            </div>
 
         </div>
-    </section>
-    <footer>
-        <div>
 
+        <!-- <hr> -->
+        <hr style="color: white; width: 1200px; margin: auto;">
+        <div class="footer-c8">
+            <div class="footer-c9">
+                <h6>Copyright© 2024 NewbieTECH, All rights reserved.</h6>
+            </div>
+            <div class="footer-c10">
+                <h6>Terms & Conditions</h6>
+                <h6>Privacy Policy</h6>
+                <h6>Return & Refund Policy</h6>
+            </div>
         </div>
     </footer>
+
+
+
 
 
     <script>
@@ -334,9 +380,9 @@
         document.querySelector(".contact-c2").style.display = "none";
         document.querySelector(".team-class").style.display = "none";
         document.querySelector(".team-c1").style.display = "none";
-       document.querySelector(".notify").style.display = "none"
+        document.querySelector(".notify").style.display = "none"
         const contactUs = () => {
-    
+
             document.querySelector(".description").style.display = "none";
             document.querySelector(".our-value").style.display = "none";
             document.querySelector(".what-we-offer").style.display = "none";
@@ -360,32 +406,32 @@
             window.location.reload()
         }
 
-        document.getElementById('form').addEventListener('submit',async(e)=>{
+        document.getElementById('form').addEventListener('submit', async (e) => {
             e.preventDefault();
             const formData = {
-                name:document.getElementById('name').value,
-                company:document.getElementById('company').value,
-                phone:document.getElementById('phone').value,
-                email:document.getElementById('email').value,
-                subject:document.getElementById('subject').value,
-                service:document.getElementById('service').value,
-                message:document.getElementById('message').value,
+                name: document.getElementById('name').value,
+                company: document.getElementById('company').value,
+                phone: document.getElementById('phone').value,
+                email: document.getElementById('email').value,
+                subject: document.getElementById('subject').value,
+                service: document.getElementById('service').value,
+                message: document.getElementById('message').value,
             };
 
-            await fetch('http://localhost:3000/send-email',{
-                method:'POST',
-                headers:{'Content-Type':'application/json'},
-                body:JSON.stringify(formData)
+            await fetch('http://localhost:3000/send-email', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formData)
 
             })
-            .then(response=>response.json())
-            .then(data=>{
-                console.log('Success: ',data)
-                document.querySelector(".notify").style.display = "flex"
-            })
-            .catch(error=>{
-                console.log('Error: ',error)
-            });
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Success: ', data)
+                    document.querySelector(".notify").style.display = "flex"
+                })
+                .catch(error => {
+                    console.log('Error: ', error)
+                });
         });
 
 
